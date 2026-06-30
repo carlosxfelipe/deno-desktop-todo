@@ -1,0 +1,12 @@
+# Deno
+.deno/
+
+# Compiled binaries
+TodoList
+TodoList.exe
+*.app
+*.dmg
+*.AppImage
+
+# OS
+.DS_Store

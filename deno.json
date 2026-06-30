@@ -1,0 +1,9 @@
+{
+  "desktop": {
+    "app": {
+      "name": "TodoList",
+      "identifier": "com.example.todolist"
+    },
+    "backend": "webview"
+  }
+}
