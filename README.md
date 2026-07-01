@@ -16,4 +16,4 @@ deno task build
 
 ## Known Issues
 
-- **macOS Minimize Bug**: In the current experimental version of Deno Desktop, clicking the Dock icon does not restore a minimized window. To unminimize, right-click the application icon in the Dock and select the window name ("Todo List").
+- **macOS Minimize Bug**: In the current experimental version of Deno Desktop, clicking the Dock icon does not restore a minimized window, making it unrecoverable without restarting the application.
