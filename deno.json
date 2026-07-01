@@ -2,8 +2,23 @@
   "desktop": {
     "app": {
       "name": "TodoList",
-      "identifier": "com.example.todolist"
+      "identifier": "com.example.todolist",
+      "icons": {
+        "macos": "./assets/app.icns"
+      }
     },
     "backend": "webview"
+  },
+  "tasks": {
+    "dev": "deno desktop -A --hmr main.ts",
+    "build": "deno desktop -A --include src --output TodoList.app main.ts",
+    "generate-icon": "cd assets && deno run -A generate_icon.ts"
+  },
+  "imports": {
+    "@resvg/resvg-js": "npm:@resvg/resvg-js@^2.6.2",
+    "@std/http": "jsr:@std/http@^1.1.2"
+  },
+  "fmt": {
+    "exclude": ["src/", "**/*.svg"]
   }
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="titlebar"></div>
+
+  <div class="input-section">
+    <div class="input-row">
+      <input id="newTodo" type="text" placeholder="Nova tarefa..." maxlength="120" />
+      <button id="addBtn" title="Adicionar">+</button>
+    </div>
+  </div>
+
+  <div class="filters">
+    <div class="segment">
+      <button class="active" data-filter="all">Todas</button>
+      <button data-filter="active">Pendentes</button>
+      <button data-filter="done">Concluídas</button>
+    </div>
+  </div>
+
+  <div class="list-wrap">
+    <ul id="list"></ul>
+  </div>
+
+  <div class="footer">
+    <span id="count"></span>
+    <button id="clearDone">Limpar concluídas</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
