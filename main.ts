@@ -35,10 +35,9 @@ win.onclose = () => {
 win.setApplicationMenu([
   {
     submenu: {
-      label: "Window",
+      label: "Arquivo",
       items: [
-        { item: { label: "Minimize", role: "minimize", enabled: true } },
-        { item: { label: "Close", role: "close", enabled: true } },
+        { item: { label: "Fechar", role: "close", enabled: true } },
       ],
     },
   },

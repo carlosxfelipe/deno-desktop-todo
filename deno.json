@@ -12,6 +12,7 @@
   "tasks": {
     "dev": "deno desktop -A --hmr main.ts",
     "build": "deno desktop -A --include src --output TodoList.app main.ts",
+    "build:linux": "deno run -A scripts/build_appimage.ts",
     "generate-icon": "cd assets && deno run -A generate_icon.ts"
   },
   "imports": {
