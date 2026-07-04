@@ -15,7 +15,7 @@ function save() {
 
 function render() {
   const visible = todos.filter((t) =>
-    filter === "all" ? true : filter === "active" ? !t.done : t.done,
+    filter === "all" ? true : filter === "active" ? !t.done : t.done
   );
 
   if (visible.length === 0) {

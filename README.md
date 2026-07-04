@@ -4,6 +4,12 @@ A native desktop application built with Deno Desktop and Webview.
 
 ![App Preview](assets/preview.png)
 
+## Requirements
+
+- [Deno](https://deno.land/) installed on your system.
+- [Deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno)
+  for VS Code (recommended).
+
 ## Development
 
 ```sh
@@ -36,6 +42,32 @@ deno task build:linux
 ```
 
 This will create a `TodoList-x86_64.AppImage` file in your root directory.
+
+## Code Formatting
+
+This project uses Deno's built-in formatter. To ensure consistent code style across the project,
+run:
+
+```sh
+deno fmt
+```
+
+Formatting rules and file exclusions are managed in [`deno.json`](./deno.json).
+
+### VS Code Setup
+
+If you use VS Code and have the **Prettier** extension installed, it may conflict with Deno's
+formatter. To use Deno's formatter automatically on save, add the following to your
+`.vscode/settings.json`:
+
+```json
+"[typescript]": {
+  "editor.defaultFormatter": "denoland.vscode-deno"
+},
+"[typescriptreact]": {
+  "editor.defaultFormatter": "denoland.vscode-deno"
+}
+```
 
 ## Known Issues
 

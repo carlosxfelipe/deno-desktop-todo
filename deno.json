@@ -14,13 +14,15 @@
     "dev": "deno desktop -A --hmr main.ts",
     "build": "deno desktop -A --include src --output TodoList.app main.ts",
     "build:linux": "deno run -A scripts/build_appimage.ts",
-    "generate-icon": "cd assets && deno run -A generate_icon.ts"
+    "generate-icon": "cd assets && deno run -A generate_icon.ts",
+    "fmt": "deno fmt",
+    "lint": "deno lint"
   },
   "imports": {
     "@resvg/resvg-js": "npm:@resvg/resvg-js@^2.6.2",
     "@std/http": "jsr:@std/http@^1.1.2"
   },
   "fmt": {
-    "exclude": ["src/", "**/*.svg"]
+    "exclude": ["**/*.svg"]
   }
 }
