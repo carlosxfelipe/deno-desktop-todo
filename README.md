@@ -42,4 +42,10 @@ This will create a `TodoList-x86_64.AppImage` file in your root directory.
 - **macOS Minimize Bug**: In the current experimental version of Deno Desktop,
   clicking the Dock icon does not restore a minimized window, making it
   unrecoverable without restarting the application.
-- **Linux AppImage Icon Bug**: Building a Linux AppImage natively using the experimental command (\`deno desktop -A --include src --output TodoList.AppImage main.ts\`) fails to display the custom icon in many file managers. The internal packager neglects to create the hidden \`.DirIcon\` symlink. To work around this, the \`build:linux\` task currently uses a custom script that leverages \`appimagetool\` to generate the \`.DirIcon\` symlink correctly.
+- **Linux AppImage Icon Bug**: Building a Linux AppImage natively using the
+  experimental command (\`deno desktop -A --include src --output
+  TodoList.AppImage main.ts\`) fails to display the custom icon in many file
+  managers. The internal packager neglects to create the hidden \`.DirIcon\`
+  symlink. To work around this, the \`build:linux\` task currently uses a custom
+  script that leverages \`appimagetool\` to generate the \`.DirIcon\` symlink
+  correctly.

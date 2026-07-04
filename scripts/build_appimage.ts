@@ -44,13 +44,15 @@ async function main() {
   console.log("🔧 Preparing AppDir structure...");
 
   // Copy icon
-  if (await exists("assets/icon.png")) {
+  if (await exists("assets/icon_source.svg")) {
+    await Deno.copyFile("assets/icon_source.svg", `${APP_DIR}/AppIcon.svg`);
+  } else if (await exists("assets/icon.png")) {
     await Deno.copyFile("assets/icon.png", `${APP_DIR}/AppIcon.png`);
     await Deno.copyFile("assets/icon.png", `${APP_DIR}/TodoList.png`);
-  } else if (await exists("assets/icon_source.svg")) {
-    await Deno.copyFile("assets/icon_source.svg", `${APP_DIR}/AppIcon.svg`);
   } else {
-    console.warn("⚠️ Icon not found at assets/icon.png or assets/icon_source.svg");
+    console.warn(
+      "⚠️ Icon not found at assets/icon_source.svg or assets/icon.png",
+    );
   }
 
   // Create AppRun symlink (Required format for AppImage)
