@@ -4,7 +4,8 @@
       "name": "TodoList",
       "identifier": "com.example.todolist",
       "icons": {
-        "macos": "./assets/app.icns"
+        "macos": "./assets/app.icns",
+        "linux": "./assets/icon.png"
       }
     },
     "backend": "webview"
